@@ -1,6 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -18,11 +21,17 @@ body {
   justify-content: space-between;
   align-items: center;
   background: rgb(178,166,159);
-  animation: bg-animation 2.5s infinite alternate;
   background-size: 200%;
   margin: 1rem 1.6rem 0.6rem;
   padding: 0.3rem 1rem;
   border-radius: 0.5rem;
+    overflow-y: hidden;
+
+}
+.header>p{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
 }
 
 
@@ -45,15 +54,6 @@ body {
   align-items: center;
 }
 
-.footer {
-  background: rgb(178,166,159);
-  margin: 0.6rem 1.6rem;
-  padding: 4rem;
-  border-radius: 0.5rem;
-  text-align: center;
-  animation: bg-animation 2.5s infinite alternate;
-  background-size: 200%;
-}
 
 .slider {
   grid-area: slider;
@@ -70,15 +70,10 @@ body {
 .fb-feed {
   grid-area: fb-feed;
 }
-
-@keyframes bg-animation {
-  0% {
-    background-position: left;
-  }
-  100% {
-    background-position: right;
-  }
+.nav-links{
+    display: none;
 }
+
 
 /* Tablet Design */
 @media only screen and (min-width: 768px) {
@@ -98,6 +93,38 @@ body {
   }
   .header > i{
     display: none;
+}
+/* Navlinks */
+.nav-links{
+    display: flex;
+    width: 100%;
+}
+.nav-links ul{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.nav-links li{
+    list-style-type: none;
+}
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: .5rem;
+    margin: .5rem .5rem;
+    display: block;
+    width: 100%;
+
+}
+.header > p{
+    width: 100%;
 }
 }
 
