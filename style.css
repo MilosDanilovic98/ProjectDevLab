@@ -73,6 +73,8 @@ body {
   grid-area: fb-feed;
 }
 
+
+
 .nav-links {
   display: none;
 }
@@ -89,6 +91,8 @@ body {
       'slider best'
       'top-rated fb-feed'
       'top-rated fb-feed';
+   
+      
   }
 
   .main>* {
