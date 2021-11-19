@@ -23,18 +23,23 @@ footer{
     display: flex;
     flex-basis: 100%;
     flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 5%;
 }
 .link-boxes >  .box{
     display: flex;
     flex-direction: column;
    flex-basis: 50%;
+   align-items: flex-start;
+   padding: 1rem;
 }
+
 .link-boxes >  .box > .link_name{
     font-size: 1.3rem;
 }
 
   .box  li  a{
-    display: flex;
+    display: inline-block;
     font-size: .8rem;
     text-decoration: none;
     color: rgb(18,53,89);      
@@ -42,27 +47,7 @@ footer{
   .box li {
      overflow-y: hidden;
   }
-  .content .top{
-      display: flex;
-      margin-top: 2rem;
 
-  }
-  .content .top .logo-details{
-    display: flex;
-    color: #fff;
-    font-size: 1.5rem;
-    width: 100%;
-    margin-left: 1rem;
-  }
-  .content .top .logo-details{
-    display: flex;
-    justify-content: flex-start;   
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 800;
-    font-size: 1.5rem;
-  }
-
-  
   .content .social{
     width: 100%;
     margin: 0 auto;
@@ -90,11 +75,13 @@ footer{
     color: #fff;
     opacity: 0.7;
     transition: 0.3s ease-in-out;
-   
   }
   .content .social a:hover{
     opacity: 0.9;
     box-shadow: 0px 1px 3px 2px rgba(255, 255, 255, 0.9);
+  }
+  .content .social i{
+    padding-top: 10px;
   }
  
   .bottom-details{
@@ -114,12 +101,20 @@ footer{
     
 }
 
+
 /* Tablet design */
 @media only screen and (min-width: 480px) and (max-width: 767px){ 
-
-.link-boxes >  .box  a{
+.link-boxes >  .box {
   flex-basis: 33.33%;
+  padding: .5rem;
  }
+.link-boxes{
+  margin-top: 3%;
+}
+.content .link-boxes ul:last-child{
+flex: 1;
+}
+
 }
 
 /* Laptop design */
@@ -127,6 +122,9 @@ footer{
   .link-boxes >  .box{
     flex-basis: 25%;
   } 
+  .link-boxes{
+    margin-top: 3%;
+  }
 }  
 
   

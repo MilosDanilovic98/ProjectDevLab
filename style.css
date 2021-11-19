@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -20,41 +21,42 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(178,166,159);
+  background: rgb(178, 166, 159);
   background-size: 200%;
   margin: 1rem 1.6rem 0.6rem;
   padding: 0.3rem 1rem;
   border-radius: 0.5rem;
-    overflow-y: hidden;
+  overflow-y: hidden;
 
 }
-.header>p{
+
+.fas {
+  overflow-y: hidden;
+}
+
+.header>p {
   font-family: 'Quicksand', sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
 }
 
-
 .main {
   margin: 0.6rem 1.6rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: 'slider' 'top-rated' 'best' 'fb-feed';
+  grid-template-areas: 'slider''top-rated''best''fb-feed';
   gap: 0.6rem;
 }
 
-.main > * {
-  background-color: rgb(18,53,89);
+.main>* {
+  background-color: rgb(18, 53, 89);
   border-radius: 0.5rem;
   padding: 1rem;
-  /* just for testing */
   height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-
 .slider {
   grid-area: slider;
 }
@@ -70,8 +72,11 @@ body {
 .fb-feed {
   grid-area: fb-feed;
 }
-.nav-links{
-    display: none;
+
+
+
+.nav-links {
+  display: none;
 }
 
 
@@ -86,32 +91,38 @@ body {
       'slider best'
       'top-rated fb-feed'
       'top-rated fb-feed';
+   
+      
   }
 
-  .main > * {
+  .main>* {
     height: auto;
   }
-  .header > i{
+
+  .header>i {
     display: none;
-}
-/* Navlinks */
-.nav-links{
+  }
+
+  /* Navlinks for testing */
+  .nav-links {
     display: flex;
     width: 100%;
-}
-.nav-links ul{
+  }
+
+  .nav-links ul {
     display: flex;
     width: 100%;
     justify-content: flex-end;
     margin: 0;
     padding: 0;
-    
-}
 
-.nav-links li{
+  }
+
+  .nav-links li {
     list-style-type: none;
-}
-.nav-links a{
+  }
+
+  .nav-links a {
     text-decoration: none;
     color: white;
     font-family: 'Quicksand', sans-serif;
@@ -122,10 +133,11 @@ body {
     display: block;
     width: 100%;
 
-}
-.header > p{
+  }
+
+  .header>p {
     width: 100%;
-}
+  }
 }
 
 /* Laptop Design */
@@ -140,7 +152,7 @@ body {
       'top-rated top-rated top-rated fb-feed'
       'top-rated top-rated top-rated fb-feed';
   }
-  .header > i{
+  .header>i {
     display: none;
-}
+  }
 }
