@@ -89,10 +89,6 @@ body {
       "top-rated fb-feed"; */
   }
 
-  .main > * {
-    height: auto;
-  }
-
   .header > i {
     display: none;
   }
