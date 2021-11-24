@@ -58,12 +58,26 @@ function moveToPrevSlide() {
 }
 
 function addImages() {
-  counter = 0;
+  var readMore = document.createElement("a");
+  readMore.classList.add("myButton");
+  readMore.innerText = "Read More";
+
+  let counter = 0;
   for (let item of slides) {
-    console.log(item.innerHTML);
-    item.innerHTML = '<img src="' + final.articles[counter].urlToImage + '">';
+    var readMore = document.createElement("a");
+    readMore.classList.add("myButton");
+    readMore.innerText = "Read More";
+    var image = document.createElement("IMG");
+    var title = document.createElement("p");
+    title.classList.add("carousel__item_text");
+    title.appendChild(readMore);
+    image.src = final.articles[counter].urlToImage;
+    title.innerText = final.articles[counter].title;
+    item.append(image);
+    item.append(title);
+    title.append(readMore);
+    console.log(title);
+
     counter++;
   }
 }
-
-addImages();

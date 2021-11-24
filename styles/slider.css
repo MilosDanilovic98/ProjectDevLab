@@ -1,6 +1,7 @@
 .carousel {
   overflow: hidden;
-
+  height: auto;
+  width: 100%;
   position: relative;
 }
 
@@ -9,12 +10,32 @@
   display: none;
 }
 .carousel__item {
+  height: auto;
 }
+.carousel__item_text {
+  position: absolute;
 
+  bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  background-image: linear-gradient(
+    180deg,
+    rgba(13, 42, 66, 0) 0,
+    rgba(13, 42, 66, 0.7) 40%,
+    rgba(13, 42, 66, 0.9)
+  );
+  max-width: 80%;
+  gap: 3rem;
+  overflow: hidden;
+  flex-wrap: wrap;
+  max-height: 8rem;
+}
 .carousel .carousel__item img {
   width: 100%;
-  max-height: 30rem;
   height: auto;
+  object-fit: contain;
 }
 
 .carousel .carousel__item--visible {
@@ -46,6 +67,30 @@
 
 .carousel .carousel__actions button#carousel__button--next {
   margin-right: 20px;
+}
+.myButton {
+  box-shadow: 3px 4px 0px 0px #1564ad;
+  background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  background-color: #79bbff;
+  border-radius: 5px;
+  border: 1px solid #337bc4;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 12px 44px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #528ecc;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+  background-color: #378de5;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
 }
 
 @keyframes fadeVisibility {
