@@ -23,6 +23,7 @@ body{
     font: bold 13px sans-serif;
   	 width: 100%;
     position: relative;
+    height: 15vw;
 }
 
 .form-search input{
@@ -64,8 +65,7 @@ body{
     width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	background-color: #6CAEE0;
+	justify-content: flex-start;
 	margin-top: 1%;
 	padding: .3rem .3rem .5rem .3rem;
 	border-radius: 5px;
@@ -75,8 +75,13 @@ body{
     padding-right: 2rem;
 }
 .filters{
-	margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 	max-width: 85%;
+  margin-top: 2%;
+	background-color: #6CAEE0;
+  padding: .5rem .5rem .5rem .5rem;
 }
 .filters label{
 	letter-spacing: 1px;
@@ -85,8 +90,14 @@ body{
 .filters label,select{
 	margin-top: .8rem;
 }
+.filters input{
+  max-width: 30%;
+}
 .hide{
 	display: none;
+}
+.search_news{
+  display: flex;
 }
 
 /* Card */
@@ -174,22 +185,58 @@ body{
     margin: 0 auto;
   }
   
+  .pagenumbers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .pagenumbers button{
+    width: 3rem;
+    height: 3rem;
 
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    background-color: #6CAEE0;
+    margin: .3rem;
+    transition: 0.4s;
+
+    color: #FFF;
+    font-size: 1.1rem;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .pagenumbers button:hover{
+    background-color: #44EEAA;
+  }
+  .pagenumbers button.active{
+    background-color: #44EEAA;
+    box-shadow: inset rgba(0, 0, 0, 0.2);
+  }
 /* Tablet design */
 @media only screen and (min-width: 767px){
+
     .filters{
         width: 40%;
+        margin-top: 0;
+       
     }
     .search-bar{
         flex-direction: row;
     }
     .form-search{
         width: 50%;
+        height: 8vw;
     }
     #results  .card{
       width:40%;
-
     }
+  
+  
 }
 /* Laptop design */
 @media only screen and (min-width: 1024px) {
@@ -198,6 +245,9 @@ body{
 	}
   #results .card{
     width: 40%;
+  }
+  .form-search {
+    height: 5vw;
   }
 }
 
