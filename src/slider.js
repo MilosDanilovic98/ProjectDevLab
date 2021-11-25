@@ -15,6 +15,7 @@ fetch(url)
 
 let slidePosition = 0;
 const slides = document.getElementsByClassName("carousel__item");
+const slideElements = document.getElementsByClassName("carousel__element");
 const totalSlides = slides.length;
 
 document
@@ -58,12 +59,12 @@ function moveToPrevSlide() {
 }
 
 function addImages() {
-  var readMore = document.createElement("a");
-  readMore.classList.add("myButton");
-  readMore.innerText = "Read More";
+  // var readMore = document.createElement("a");
+  // readMore.classList.add("myButton");
+  // readMore.innerText = "Read More";
 
   let counter = 0;
-  for (let item of slides) {
+  for (let item of slideElements) {
     var readMore = document.createElement("a");
     readMore.classList.add("myButton");
     readMore.innerText = "Read More";
