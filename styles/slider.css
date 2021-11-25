@@ -10,7 +10,7 @@
   display: none;
 }
 .carousel__item {
-  height: 25rem;
+  height: 27rem;
 
   overflow: hidden;
 
@@ -120,7 +120,6 @@
     height: auto;
   }
   .carousel__element {
-    height: 25rem;
     width: auto;
   }
 }
