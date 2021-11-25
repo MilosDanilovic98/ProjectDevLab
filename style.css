@@ -43,7 +43,7 @@ body {
   margin: 0.6rem 1.6rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "slider" "top-rated" "best" "fb-feed";
+  grid-template-areas: "carousel" "top-rated" "best" "fb-feed";
   gap: 0.6rem;
 }
 
@@ -51,13 +51,12 @@ body {
   background-color: rgb(18, 53, 89);
   border-radius: 0.5rem;
   padding: 1rem;
-  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.slider {
-  grid-area: slider;
+.carousel {
+  grid-area: carousel;
 }
 
 .top-rated {
@@ -131,14 +130,12 @@ body {
 /* Laptop Design */
 @media only screen and (min-width: 1024px) {
   .main {
-    /* height: 80vh;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
-      "slider slider slider best"
-      "slider slider slider best"
+      "carousel carousel carousel carousel"
       "top-rated top-rated top-rated fb-feed"
-      "top-rated top-rated top-rated fb-feed"; */
+      "top-rated top-rated top-rated best";
   }
   .header > i {
     display: none;

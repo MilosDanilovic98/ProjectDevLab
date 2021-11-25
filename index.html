@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
     <link rel="stylesheet" href="styles/slider.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
     <title>Test2</title>
   </head>
 
@@ -26,7 +27,14 @@
       </div>
     </header>
     <main class="main">
-      <div class="carousel">
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+      </div>
+      <div class="carousel" id="carousel">
         <div class="carousel__item carousel__item--visible">
           <div class="carousel__element"></div>
           <div class="carousel__element"></div>
@@ -50,6 +58,9 @@
           <button id="carousel__button--next" aria-label="Next slide">></button>
         </div>
       </div>
+      <div class="top-rated">s</div>
+      <div class="fb-feed">ss</div>
+      <div class="best">s</div>
     </main>
     <footer class="footer">
       <div class="content">
@@ -103,5 +114,6 @@
 
     <script src="./script.js"></script>
     <script src="src/slider.js"></script>
+    <script src="src/modal.js"></script>
   </body>
 </html>
