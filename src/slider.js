@@ -88,7 +88,7 @@ function addImages() {
     var readMore = document.createElement("a");
 
     readMore.classList.add("myButton");
-    readMore.setAttribute("id", "readMore");
+
     readMore.innerText = "Read More";
     readMore.setAttribute("id", "SliderArticleNumber" + counter);
     var image = document.createElement("IMG");

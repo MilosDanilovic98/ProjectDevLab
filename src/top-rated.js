@@ -20,6 +20,11 @@ function addElementsToTopRated() {
   for (let item of topRatedRes.articles) {
     let topRatedItem = document.createElement("div");
     topRatedItem.classList.add("top-rated-container-item");
+    if (counter < 10) {
+      topRatedItem.setAttribute("id", "topRatedId0" + counter);
+    } else {
+      topRatedItem.setAttribute("id", "topRatedId" + counter);
+    }
 
     topRatedItem.style.backgroundImage = "url('" + item.urlToImage + "')";
 
@@ -38,6 +43,7 @@ function addElementsToTopRated() {
     if (counter > 2) {
       topRatedItem.style.display = "none";
     }
+    topRatedItem.addEventListener("click", addModalContent);
     topRatedContainer.append(topRatedItem);
     counter++;
   }
@@ -56,4 +62,43 @@ function loadMore() {
       }
     }
   }
+}
+
+function addModalContent(e) {
+  var modal = document.getElementById("myModal");
+  var span = document.getElementsByClassName("close")[0];
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  let articleId = parseInt(e.currentTarget.id.slice(-2));
+  modal.style.display = "block";
+  modalContent.innerHTML = "";
+
+  var image = document.createElement("IMG");
+  image.src = topRatedRes.articles[articleId].urlToImage;
+
+  var urlToArticle = document.createElement("a");
+  urlToArticle.innerText = "Read the Source";
+  urlToArticle.href = final.articles[articleId].url;
+
+  let articleDescription = document.createElement("p");
+  articleDescription.innerText =
+    "Description: " + final.articles[articleId].description;
+
+  let articleTitle = document.createElement("p");
+  articleTitle.innerText = final.articles[articleId].title;
+
+  let articleAuthor = document.createElement("p");
+  articleAuthor.innerText = "The author: " + final.articles[articleId].author;
+
+  let articleDate =
+    "Published At: " + new Date(final.articles[articleId].publishedAt);
+
+  modalContent.append(articleTitle);
+  modalContent.append(image);
+  modalContent.append(articleAuthor);
+  modalContent.append(articleDescription);
+  modalContent.append(urlToArticle);
+  modalContent.append(articleDate);
 }
