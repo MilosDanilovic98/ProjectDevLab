@@ -16,7 +16,7 @@ const carouselContainer = document.getElementById("carousel");
 const slides = document.getElementsByClassName("carousel__item");
 const slideElements = document.getElementsByClassName("carousel__element");
 const totalSlides = slides.length;
-const modalContent = document.getElementById("modalContent");
+
 slideTimer = setInterval(moveToNextSlide, 3000);
 document
   .getElementById("carousel__button--next")
@@ -90,66 +90,26 @@ function addImages() {
     readMore.classList.add("myButton");
 
     readMore.innerText = "Read More";
-    readMore.setAttribute("id", "SliderArticleNumber" + counter);
-    var image = document.createElement("IMG");
+
+    if (counter < 10) {
+      readMore.setAttribute("id", "SliderArticleNumber0" + counter);
+    } else {
+      readMore.setAttribute("id", "SliderArticleNumber" + counter);
+    }
+    readMore.addEventListener("click", addModalContent);
+
     var title = document.createElement("p");
     title.classList.add("carousel__item_text");
     title.appendChild(readMore);
+
+    var image = document.createElement("IMG");
     image.src = final.articles[counter].urlToImage;
     title.innerText = final.articles[counter].title;
+
     item.append(image);
     item.append(title);
     title.append(readMore);
 
-    //modal
-
     counter++;
-  }
-  addEventsOnReadMore();
-}
-
-function addEventsOnReadMore() {
-  // Get the modal
-  var modal = document.getElementById("myModal");
-  var span = document.getElementsByClassName("close")[0];
-  span.onclick = function () {
-    modal.style.display = "none";
-  };
-  let readMoreButtons = document.getElementsByClassName("myButton");
-  for (let item of readMoreButtons) {
-    item.onclick = function () {
-      let articleId = item.id.charAt(item.id.length - 1);
-
-      modal.style.display = "block";
-      modalContent.innerHTML = "";
-
-      var image = document.createElement("IMG");
-      image.src = final.articles[articleId].urlToImage;
-
-      var urlToArticle = document.createElement("a");
-      urlToArticle.innerText = "Read the Source";
-      urlToArticle.href = final.articles[articleId].url;
-
-      let articleDescription = document.createElement("p");
-      articleDescription.innerText =
-        "Description: " + final.articles[articleId].description;
-
-      let articleTitle = document.createElement("p");
-      articleTitle.innerText = final.articles[articleId].title;
-
-      let articleAuthor = document.createElement("p");
-      articleAuthor.innerText =
-        "The author: " + final.articles[articleId].author;
-
-      let articleDate =
-        "Published At: " + new Date(final.articles[articleId].publishedAt);
-
-      modalContent.append(articleTitle);
-      modalContent.append(image);
-      modalContent.append(articleAuthor);
-      modalContent.append(articleDescription);
-      modalContent.append(urlToArticle);
-      modalContent.append(articleDate);
-    };
   }
 }
