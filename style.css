@@ -51,9 +51,6 @@ body {
   background-color: rgb(18, 53, 89);
   border-radius: 0.5rem;
   padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .carousel {
   grid-area: carousel;
@@ -61,6 +58,7 @@ body {
 
 .top-rated {
   grid-area: top-rated;
+  min-width: 0;
 }
 
 .best {
@@ -131,7 +129,7 @@ body {
 @media only screen and (min-width: 1024px) {
   .main {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: min-content;
     grid-template-areas:
       "carousel carousel carousel carousel"
       "top-rated top-rated top-rated fb-feed"

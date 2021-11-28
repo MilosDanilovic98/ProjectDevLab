@@ -39,9 +39,11 @@
 }
 
 .modal-content > * {
-  width: 70%;
   text-align: center;
-  height: auto;
+  width: 100%;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
 }
 
 /* The Close Button */
@@ -49,7 +51,7 @@
   color: #aaaaaa;
   float: right;
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 1100;
   z-index: 100;
 }
 

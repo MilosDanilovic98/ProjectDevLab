@@ -3,6 +3,9 @@
   height: auto;
   width: 100%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel .carousel__item,
@@ -11,9 +14,7 @@
 }
 .carousel__item {
   height: 27rem;
-
   overflow: hidden;
-
   flex-direction: row;
   gap: 2rem;
   align-items: center;

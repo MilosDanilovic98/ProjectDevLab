@@ -1,7 +1,5 @@
 var url =
-  "https://newsapi.org/v2/top-headlines?" +
-  "sources=bbc-news&" +
-  "apiKey=e3fb4f5299d44066b025296877ccc8e4";
+  "https://newsapi.org/v2/everything?q=bitcoin&apiKey=e3fb4f5299d44066b025296877ccc8e4";
 var final;
 var req = new Request(url);
 fetch(url)
@@ -83,6 +81,7 @@ function removeEvent() {
 }
 carouselContainer.addEventListener("mouseenter", inContainer);
 carouselContainer.addEventListener("mouseleave", removeEvent);
+
 function addImages() {
   let counter = 0;
   for (let item of slideElements) {
