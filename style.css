@@ -58,11 +58,14 @@ body {
 
 .top-rated {
   grid-area: top-rated;
-  min-width: 0;
 }
 
 .best {
   grid-area: best;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
 }
 
 .fb-feed {
@@ -131,8 +134,10 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: min-content;
     grid-template-areas:
-      "carousel carousel carousel carousel"
-      "top-rated top-rated top-rated fb-feed"
+      "carousel carousel carousel best"
+      "top-rated top-rated top-rated best"
+      "top-rated top-rated top-rated best"
+      "top-rated top-rated top-rated best"
       "top-rated top-rated top-rated best";
   }
   .header > i {

@@ -6,12 +6,21 @@ span.onclick = function () {
 };
 
 function addModalContent(e) {
+  let final;
+
+  if (e.currentTarget.id.slice(0, 4) === "Slid") {
+    final = sliderRes;
+  } else if (e.currentTarget.id.slice(0, 4) == "topR") {
+    final = topRatedRes;
+  } else {
+    final = bestSidebarRes;
+  }
   let articleId = parseInt(e.currentTarget.id.slice(-2));
   modal.style.display = "block";
   modalContent.innerHTML = "";
 
   var image = document.createElement("IMG");
-  image.src = topRatedRes.articles[articleId].urlToImage;
+  image.src = final.articles[articleId].urlToImage;
 
   var urlToArticle = document.createElement("a");
   urlToArticle.innerText = "Read the Source";

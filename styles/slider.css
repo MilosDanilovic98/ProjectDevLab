@@ -6,6 +6,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 15rem;
 }
 
 .carousel .carousel__item,

@@ -10,10 +10,19 @@
     <link rel="stylesheet" href="styles/slider.css" />
     <link rel="stylesheet" href="styles/modal.css" />
     <link rel="stylesheet" href="styles/topRated.css" />
+    <link rel="stylesheet" href="styles/bestSidebar.css" />
     <title>Test2</title>
   </head>
 
   <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0"
+      nonce="rPqkGoqo"
+    ></script>
     <header class="header">
       <p>Fake News</p>
       <i class="fas fa-bars fa-lg"></i>
@@ -63,9 +72,30 @@
           <button id="loadMoreBtn">Load More</button>
         </div>
       </div>
-      <div class="fb-feed"></div>
-
-      <div class="best">s</div>
+      <div class="best">
+        <div class="sidebarBestContainer" id="sidebarBestContainer"></div>
+        <div
+          class="fb-page"
+          data-href="https://www.facebook.com/NewsToday-103771608815300/"
+          data-tabs="timeline"
+          data-width=""
+          data-height=""
+          data-small-header="false"
+          data-adapt-container-width="true"
+          data-hide-cover="false"
+          data-show-facepile="true"
+        >
+          <blockquote
+            cite="https://www.facebook.com/NewsToday-103771608815300/"
+            class="fb-xfbml-parse-ignore"
+          >
+            <a href="https://www.facebook.com/NewsToday-103771608815300/"
+              >NewsToday</a
+            >
+          </blockquote>
+        </div>
+      </div>
+      <!-- <div class="fb-feed"></div> -->
     </main>
     <footer class="footer">
       <div class="content">
@@ -121,5 +151,6 @@
     <script src="src/slider.js"></script>
     <script src="src/top-rated.js"></script>
     <script src="src/modal.js"></script>
+    <script src="src/bestSidebar.js"></script>
   </body>
 </html>

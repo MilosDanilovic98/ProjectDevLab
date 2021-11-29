@@ -1,13 +1,13 @@
 var url =
   "https://newsapi.org/v2/everything?q=bitcoin&apiKey=e3fb4f5299d44066b025296877ccc8e4";
-var final;
+var sliderRes;
 var req = new Request(url);
 fetch(url)
   .then(function (response) {
     return response.json();
   })
   .then(function (obj) {
-    final = obj;
+    sliderRes = obj;
     addImages();
   });
 
@@ -103,8 +103,8 @@ function addImages() {
     title.appendChild(readMore);
 
     var image = document.createElement("IMG");
-    image.src = final.articles[counter].urlToImage;
-    title.innerText = final.articles[counter].title;
+    image.src = sliderRes.articles[counter].urlToImage;
+    title.innerText = sliderRes.articles[counter].title;
 
     item.append(image);
     item.append(title);
