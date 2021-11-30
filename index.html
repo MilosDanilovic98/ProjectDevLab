@@ -12,19 +12,84 @@
 </head>
 
 <body>
-    <header class="header">
-        <p>Fake News</p>
-        <i class="fas fa-bars fa-lg"></i>
-        <div class="nav-links">
-            <ul>
-                <li><a href="">Page 1</a></li>
-                <li><a href="">Page 2</a></li>
-                <li><a href="">Page 3</a></li>
-                <li><a href="">Page 4</a></li>
-                <li><a href="">Page 5</a></li>
-            </ul>
+    <header>
+        <section id="topnavbar">
+            <div class="icons">
+
+                <span><i class="fa fa-phone"></i> </span>
+                <span><i class="fa fa-facebook"></i> </span>
+                <span><i class="fa fa-instagram"></i> </span>
+                <span><i class="fa fa-twitter"></i> </span>
+            </div>
+        </section>
+        <div class="news-container">
+            <div direction="left" id='topnews'>
+
+            </div>
         </div>
     </header>
+
+    <!--NAVIGATION-->
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <a href="#home" id="logo" class="logo-title"><img
+                    src="https://culturenojhome.files.wordpress.com/2019/04/earth-icon.gif?w=372" alt=""
+                    style="height: 60px; width: auto;">NEWS</a>
+            <a href="#about" class="nav-link">About-Us</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <div class="dropdown">
+                <button class="dropbtn" class="nav-link">Categories
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="sub-dropdown">
+                        <button class="sub-dropbtn"> Weather
+                        </button>
+                    </div>
+                    <div class="sub-dropdown">
+                        <button class="sub-dropbtn"> Culture
+                        </button>
+                    </div>
+                    <div class="sub-dropdown">
+                        <button class="sub-dropbtn"> Sport
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <a href="#" id="active" class="nav-link">Home</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+        </div>
+
+        <div id="navbar">
+            <a href="#home" id="logo" class="logo-title" style="float: left;"><img
+                    src="https://culturenojhome.files.wordpress.com/2019/04/earth-icon.gif?w=372" alt=""
+                    style="height: 60px; width: auto;">NEWS</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <div class="dropdown">
+                <button class="dropbtn" class="nav-link">Categories
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-content">
+                        <div class="sub-dropdown">
+                            <button class="sub-dropbtn"> Science
+                            </button>
+                        </div>
+                        <div class="sub-dropdown">
+                            <button class="sub-dropbtn"> Lifestyle
+                            </button>
+                        </div>
+                        <div class="sub-dropdown">
+                            <button class="sub-dropbtn"> Film
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" id="active" class="nav-link">Home</a>
+        </div>
+    </nav>
     <main class="main">
         <div class="slider">slider</div>
         <div class="top-rated">top-rated</div>
