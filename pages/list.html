@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/list.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="search-bar">
+            <form class="form-search" method="get" action="#">
+                <input type="search" name="search" placeholder="Search..." id="search" >
+                <button type="submit">Search</button>
+            </form>
+            <div class="filters hide">
+                <div class="group">
+                    <label for="sort">Sort by: </label>
+                    <select name="filter" id="options">
+                    <option value="recent_first">Recent First</option>
+                     <option value="popularity" id="popularity">Popularity</option>
+                     <option value="relevancy">Relevancy</option>
+                   </select>
+                </div>  
+                <div class="search_news">
+                    <label for="">Search news by date</label>
+                    <input type="text"  id="date" placeholder="YYYY-MM-DD" >
+                </div>
+                <div class="category">
+                    <label for="">Category:</label>
+                    <select name="filter" id="options">
+                        <option disabled selected value="">-- Select an option -- </option>
+                        <option value="bussines">Bussines</option>
+                         <option value="popularity" id="popularity">Sport</option>
+                         <option value="relevancy">Economy</option>
+                       </select>
+                </div>
+            </div>
+        </div>
+        <div id="results"></div>
+        <div id="messsage"></div>
+        <div class="pagenumbers" id="pagination"></div>
+    </main>
+  <footer></footer>
+    <script src="../app/list.js"></script>
+</body>
+
+</html>
