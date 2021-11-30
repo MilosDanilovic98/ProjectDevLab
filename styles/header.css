@@ -376,12 +376,13 @@
     text-decoration: underline;
     align-items: center;
     transform: translateX(100%);
-    animation: scroll 15s linear infinite;
+    animation: scroll 30s linear infinite;
   }
 
   @keyframes scroll{
     0%{transform: translateX(100%);}
     100%{transform: translateX(-100%);}
+
   }
 
   .news-container
@@ -392,6 +393,7 @@
 
   #topnews a {
     margin-right: 40px;
+    font-size: 15px;
   }
 
   #fsModal {
