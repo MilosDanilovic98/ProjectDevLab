@@ -370,14 +370,27 @@
     cursor: pointer;
   }
 
-  marquee {
+  #topnews {
     color: white;
     display: flex;
     text-decoration: underline;
     align-items: center;
+    transform: translateX(100%);
+    animation: scroll 15s linear infinite;
   }
 
-  marquee a {
+  @keyframes scroll{
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(-100%);}
+  }
+
+  .news-container
+  {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #topnews a {
     margin-right: 40px;
   }
 
