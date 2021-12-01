@@ -25,10 +25,16 @@ function addModalContent(e) {
   var urlToArticle = document.createElement("a");
   urlToArticle.innerText = "Read the Source";
   urlToArticle.href = final.articles[articleId].url;
+  urlToArticle.target = "_blank";
 
   let articleDescription = document.createElement("p");
   articleDescription.innerText =
     "Description: " + final.articles[articleId].description;
+  console.log(articleDescription.innerText.length);
+  // if (articleDescription.innerText.length > 170) {
+  //   articleDescription.innerText =
+  //     articleDescription.innerText.slice(0, 170) + "...";
+  // }
 
   let articleTitle = document.createElement("p");
   articleTitle.innerText = final.articles[articleId].title;
@@ -39,10 +45,11 @@ function addModalContent(e) {
   let articleDate =
     "Published At: " + new Date(final.articles[articleId].publishedAt);
 
-  modalContent.append(articleTitle);
   modalContent.append(image);
-  modalContent.append(articleAuthor);
+  modalContent.append(articleTitle);
+
   modalContent.append(articleDescription);
   modalContent.append(urlToArticle);
+  modalContent.append(articleAuthor);
   modalContent.append(articleDate);
 }

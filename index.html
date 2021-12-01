@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="styles/modal.css" />
     <link rel="stylesheet" href="styles/topRated.css" />
     <link rel="stylesheet" href="styles/bestSidebar.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap"
+      rel="stylesheet"
+    />
     <title>Test2</title>
   </head>
 
@@ -23,19 +30,90 @@
       src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0"
       nonce="rPqkGoqo"
     ></script>
-    <header class="header">
-      <p>Fake News</p>
-      <i class="fas fa-bars fa-lg"></i>
-      <div class="nav-links">
-        <ul>
-          <li><a href="">Page 1</a></li>
-          <li><a href="">Page 2</a></li>
-          <li><a href="">Page 3</a></li>
-          <li><a href="">Page 4</a></li>
-          <li><a href="">Page 5</a></li>
-        </ul>
-      </div>
+    <header>
+      <section id="topnavbar">
+        <div class="icons">
+          <span><i class="fa fa-phone"></i> </span>
+          <span><i class="fa fa-facebook"></i> </span>
+          <span><i class="fa fa-instagram"></i> </span>
+          <span><i class="fa fa-twitter"></i> </span>
+        </div>
+      </section>
+      <marquee direction="left" id="topnews"> </marquee>
     </header>
+
+    <!--NAVIGATION-->
+    <nav>
+      <div class="topnav" id="myTopnav">
+        <a href="#home" id="logo" class="logo-title"
+          ><img
+            src="https://culturenojhome.files.wordpress.com/2019/04/earth-icon.gif?w=372"
+            alt=""
+            style="height: 60px; width: auto"
+          />NEWS</a
+        >
+        <a href="#about" class="nav-link">About-Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <div class="dropdown">
+          <button class="dropbtn" class="nav-link">
+            Categories
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="sub-dropdown">
+              <button class="sub-dropbtn">Weather</button>
+            </div>
+            <div class="sub-dropdown">
+              <button class="sub-dropbtn">Culture</button>
+            </div>
+            <div class="sub-dropdown">
+              <button class="sub-dropbtn">Sport</button>
+            </div>
+          </div>
+        </div>
+        <a href="#" id="active" class="nav-link">Home</a>
+        <a
+          href="javascript:void(0);"
+          style="font-size: 15px"
+          class="icon"
+          onclick="NavBar()"
+          >&#9776;</a
+        >
+      </div>
+
+      <div id="navbar">
+        <a href="#home" id="logo" class="logo-title" style="float: left"
+          ><img
+            src="https://culturenojhome.files.wordpress.com/2019/04/earth-icon.gif?w=372"
+            alt=""
+            style="height: 60px; width: auto"
+          />NEWS</a
+        >
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <div class="dropdown">
+          <button class="dropbtn" class="nav-link">
+            Categories
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-content">
+              <div class="sub-dropdown">
+                <button class="sub-dropbtn">Science</button>
+              </div>
+              <div class="sub-dropdown">
+                <button class="sub-dropbtn">Lifestyle</button>
+              </div>
+              <div class="sub-dropdown">
+                <button class="sub-dropbtn">Film</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" id="active" class="nav-link">Home</a>
+      </div>
+    </nav>
+
     <main class="main">
       <div id="myModal" class="modal">
         <!-- Modal content -->
@@ -67,32 +145,35 @@
         </div>
       </div>
       <div class="top-rated">
+        <p class="topRatedTitle">Top Rated News</p>
         <div class="top-rated-container" id="top-rated-container"></div>
         <div class="top-rated-load-more">
-          <button id="loadMoreBtn">Load More</button>
+          <button class="loadMoreBtn" id="loadMoreBtn">Load More</button>
         </div>
       </div>
       <div class="best">
         <div class="sidebarBestContainer" id="sidebarBestContainer"></div>
-        <div
-          class="fb-page"
-          data-href="https://www.facebook.com/NewsToday-103771608815300/"
-          data-tabs="timeline"
-          data-width=""
-          data-height=""
-          data-small-header="false"
-          data-adapt-container-width="true"
-          data-hide-cover="false"
-          data-show-facepile="true"
-        >
-          <blockquote
-            cite="https://www.facebook.com/NewsToday-103771608815300/"
-            class="fb-xfbml-parse-ignore"
+        <div class="fbContainer">
+          <div
+            class="fb-page"
+            data-href="https://www.facebook.com/NewsToday-103771608815300/"
+            data-tabs="timeline"
+            data-width=""
+            data-height=""
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true"
           >
-            <a href="https://www.facebook.com/NewsToday-103771608815300/"
-              >NewsToday</a
+            <blockquote
+              cite="https://www.facebook.com/NewsToday-103771608815300/"
+              class="fb-xfbml-parse-ignore"
             >
-          </blockquote>
+              <a href="https://www.facebook.com/NewsToday-103771608815300/"
+                >NewsToday</a
+              >
+            </blockquote>
+          </div>
         </div>
       </div>
       <!-- <div class="fb-feed"></div> -->
@@ -152,5 +233,6 @@
     <script src="src/top-rated.js"></script>
     <script src="src/modal.js"></script>
     <script src="src/bestSidebar.js"></script>
+    <script src="src/header.js"></script>
   </body>
 </html>

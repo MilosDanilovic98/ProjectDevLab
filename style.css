@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  background-color: #042c31;
+  background-color: black;
   color: white;
 }
 
@@ -45,29 +45,39 @@ body {
   grid-template-columns: 1fr;
   grid-template-areas: "carousel" "top-rated" "best" "fb-feed";
   gap: 0.6rem;
+  background-color: black;
 }
 
 .main > * {
-  background-color: rgb(18, 53, 89);
   border-radius: 0.5rem;
   padding: 1rem;
+  background: #192bc2;
 }
 .carousel {
   grid-area: carousel;
+  background-color: #fefdff;
 }
 
 .top-rated {
   grid-area: top-rated;
+  background-color: black;
 }
 
 .best {
   grid-area: best;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  gap: 2rem;
-}
+  justify-content: space-between;
+  background-color: black;
 
+  gap: 1rem;
+}
+.fbContainer {
+  text-align: center;
+}
+.fb-page {
+  width: 100%;
+}
 .fb-feed {
   grid-area: fb-feed;
 }
@@ -76,6 +86,8 @@ body {
   display: none;
 }
 
+@media only screen and (max-width: 600px) {
+}
 /* Tablet Design */
 @media only screen and (min-width: 768px) {
   .main {

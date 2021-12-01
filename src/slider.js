@@ -1,5 +1,7 @@
 var url =
-  "https://newsapi.org/v2/everything?q=bitcoin&apiKey=e3fb4f5299d44066b025296877ccc8e4";
+  "https://newsapi.org/v2/everything?q=bitcoin&apiKey=e14071a8a61045fda968752842f8f3fe";
+
+// e3fb4f5299d44066b025296877ccc8e4;
 var sliderRes;
 var req = new Request(url);
 fetch(url)
@@ -99,13 +101,17 @@ function addImages() {
     readMore.addEventListener("click", addModalContent);
 
     var title = document.createElement("p");
+
     title.classList.add("carousel__item_text");
     title.appendChild(readMore);
 
     var image = document.createElement("IMG");
     image.src = sliderRes.articles[counter].urlToImage;
     title.innerText = sliderRes.articles[counter].title;
-
+    console.log();
+    if (title.innerText.length > 100) {
+      title.innerText = title.innerText.slice(0, 100) + "...";
+    }
     item.append(image);
     item.append(title);
     title.append(readMore);
