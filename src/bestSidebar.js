@@ -32,6 +32,7 @@ function addElementsToBestSidebar() {
     let bestSidebarItemSource = document.createElement("p");
     bestSidebarItemSource.innerText =
       bestSidebarRes.articles[index].source.name;
+    bestSidebarItemSource.classList.add("sidebarBestContainerItemSource");
 
     bestSidebarItem.append(bestSidebarItemTitle);
     bestSidebarItem.append(bestSidebarItemDescription);

@@ -67,13 +67,12 @@ body {
   grid-area: best;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color: black;
-
-  gap: 1rem;
 }
 .fbContainer {
   text-align: center;
+  margin-top: 10rem;
 }
 .fb-page {
   width: 100%;

@@ -107,7 +107,8 @@
 }
 .loadMoreBtn:hover {
   text-shadow: tomato;
-  width: 22rem;
+  width: 70%;
+  border: 5px solid #14429e;
 }
 @media only screen and (max-width: 1024px) {
   .top-rated-container {

@@ -86,7 +86,7 @@
   border-radius: 50px;
   border: 0;
   font-size: 2rem;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.397);
   color: white;
   font-weight: bold;
   cursor: pointer;
