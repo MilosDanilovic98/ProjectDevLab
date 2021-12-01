@@ -12,12 +12,12 @@ footer{
     flex-direction: column;
     width: 100%;
     position: relative;
-    background: rgb(178,166,159);
+    background:linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, rgb(20, 66, 158) 100%);
     bottom: 0;
     left: 0;
     width: 100%;
     overflow-y: hidden;
-  
+    color: #fff;
   }
   .link-boxes{
     display: flex;
@@ -36,13 +36,18 @@ footer{
 
 .link-boxes >  .box > .link_name{
     font-size: 1.3rem;
+    margin-bottom: .8rem;
 }
 
   .box  li  a{
     display: inline-block;
     font-size: .8rem;
-    text-decoration: none;
-    color: rgb(18,53,89);      
+    text-decoration: none;    
+    color: #fff;
+}
+
+.box  li  a:hover{
+  border-bottom: 1px solid #44FFEE;
 }
   .box li {
      overflow-y: hidden;
@@ -97,7 +102,7 @@ footer{
   }
 .bottom_text  .copyright_text a {
   text-decoration: none;
-  color: rgb(18,53,89);      
+  color: #44FFEE;      
     
 }
 
