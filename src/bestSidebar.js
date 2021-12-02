@@ -1,5 +1,5 @@
 var url =
-  "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=e14071a8a61045fda968752842f8f3fe";
+  "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=e3fb4f5299d44066b025296877ccc8e4";
 var bestSidebarRes;
 var req = new Request(url);
 fetch(url)

@@ -1,22 +1,19 @@
 .sidebarBestContainer {
-  /* display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  grid-auto-rows: 1fr; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   gap: 4rem;
-  border: 10px solid rgb(20, 66, 158);
+  border: 10px solid black;
   border-bottom-left-radius: 2rem;
-  background-color: #fefdff;
-  padding: 1rem;
+  background-color: #fffaff;
+
+  padding: 0.5rem;
 }
 
 .bestTodayTitle {
   font-size: 3rem;
   text-align: center;
-  background-color: rgb(20, 66, 158);
+  background-color: black;
   width: 100%;
   border-top-left-radius: 2rem;
   font-weight: 600;
@@ -34,18 +31,14 @@
   text-shadow: 0.05em 0 black, 0 0.05em black, -0.05em 0 black, 0 -0.05em black,
     -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black,
     0.05em 0.05em black;
-  /* box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); */
+
   cursor: pointer;
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
+
   background-size: 100% 100%;
 }
 
 .sidebarBestContainerItem > :first-child {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   width: 100%;
   color: white;
   font-weight: bold;
@@ -91,5 +84,14 @@
   .sidebarBestContainerItem {
     height: 20rem;
     justify-content: space-between;
+  }
+}
+
+@media only screen and(min-width: 1023px) and (max-width: 1300px) {
+  .sidebarBestContainerItem > :first-child {
+    font-size: 0.9rem;
+  }
+  .sidebarBestContainerItemSource {
+    font-size: 1rem;
   }
 }
