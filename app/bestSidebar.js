@@ -1,5 +1,5 @@
 var url =
-  "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=e3fb4f5299d44066b025296877ccc8e4";
+  "https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=e3fb4f5299d44066b025296877ccc8e4";
 var bestSidebarRes;
 var req = new Request(url);
 fetch(url)
@@ -28,7 +28,10 @@ function addElementsToBestSidebar() {
     let bestSidebarItemDescription = document.createElement("p");
     bestSidebarItemDescription.innerText =
       bestSidebarRes.articles[index].description;
-
+    if (bestSidebarItemDescription.innerText.length > 130) {
+      bestSidebarItemDescription.innerText =
+        bestSidebarItemDescription.innerText.slice(0, 130) + "...";
+    }
     let bestSidebarItemSource = document.createElement("p");
     bestSidebarItemSource.innerText =
       bestSidebarRes.articles[index].source.name;

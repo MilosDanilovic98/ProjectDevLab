@@ -115,11 +115,14 @@
     </nav>
 
     <main class="main">
+      <!-- Modal start -->
       <div id="myModal" class="modal">
-        <!-- Modal content -->
         <span class="close">&times;</span>
         <div class="modal-content" id="modalContent"></div>
       </div>
+      <!-- Moadl end -->
+
+      <!-- Slider Start -->
       <div class="carousel" id="carousel">
         <div class="carousel__item carousel__item--visible">
           <div class="carousel__element"></div>
@@ -144,6 +147,9 @@
           <button id="carousel__button--next" aria-label="Next slide">></button>
         </div>
       </div>
+      <!-- Slider end -->
+
+      <!-- Top rated Start -->
       <div class="top-rated">
         <p class="topRatedTitle">Top Rated News</p>
         <div class="top-rated-container" id="top-rated-container"></div>
@@ -151,9 +157,15 @@
           <button class="loadMoreBtn" id="loadMoreBtn">Load More</button>
         </div>
       </div>
+
+      <!-- Top Rated end -->
+
+      <!--  Sidebar Start -->
       <div class="best">
-        <p class="bestTodayTitle">Best of today</p>
+        <p class="bestTodayTitle">Science News</p>
         <div class="sidebarBestContainer" id="sidebarBestContainer"></div>
+
+        <!-- Fb section start -->
         <div class="fbContainer">
           <div
             class="fb-page"
@@ -176,8 +188,9 @@
             </blockquote>
           </div>
         </div>
+        <!-- Fb section end -->
       </div>
-      <!-- <div class="fb-feed"></div> -->
+      <!-- Sidebar end -->
     </main>
     <footer class="footer">
       <div class="content">
@@ -230,10 +243,10 @@
     </footer>
 
     <script src="./script.js"></script>
-    <script src="src/slider.js"></script>
-    <script src="src/top-rated.js"></script>
-    <script src="src/modal.js"></script>
-    <script src="src/bestSidebar.js"></script>
-    <script src="src/header.js"></script>
+    <script src="app/slider.js"></script>
+    <script src="app/top-rated.js"></script>
+    <script src="app/modal.js"></script>
+    <script src="app/bestSidebar.js"></script>
+    <script src="app/header.js"></script>
   </body>
 </html>

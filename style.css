@@ -66,17 +66,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: rgb(20, 66, 158);
-}
-.fbContainer {
-  text-align: center;
-  margin-top: 10rem;
-}
-.fb-page {
-  width: 100%;
-}
-.fb-feed {
-  grid-area: fb-feed;
+  /* background-color: rgb(20, 66, 158); */
+  /* background-color: black; */
 }
 
 .nav-links {

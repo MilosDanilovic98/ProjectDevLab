@@ -11,7 +11,11 @@ footer {
   flex-direction: column;
   width: 100%;
   position: relative;
-  background: rgb(178, 166, 159);
+  background: linear-gradient(
+    90deg,
+    hsla(221, 45%, 73%, 1) 0%,
+    rgb(20, 66, 158) 100%
+  );
   bottom: 0;
   left: 0;
   width: 100%;

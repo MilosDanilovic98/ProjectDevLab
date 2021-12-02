@@ -1,4 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap");
+/* Animations */
+@keyframes slide-in-left-slider {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right-slider {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .carousel {
   overflow: hidden;
   height: auto;
@@ -21,7 +42,6 @@
   overflow: hidden;
   flex-direction: row;
   gap: 2rem;
-
   align-items: center;
   font-family: "Poppins", Arial, sans-serif;
 }
@@ -37,27 +57,13 @@
   position: relative;
   border-top-left-radius: 3rem;
   border-top-right-radius: 1rem;
-  /* box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); */
-  animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-@keyframes slide-in-bottom {
-  0% {
-    transform: translateX(-200%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+
 .carousel__item_text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: auto;
-
   gap: 2rem;
   overflow: hidden;
   background-color: #fefdff;
@@ -70,7 +76,12 @@
 
 .carousel .carousel__item--visible {
   display: flex;
-  /* animation: fadeVisibility 0.5s; */
+  animation: slide-in-left-slider 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.carousel .carousel__item--visible-left {
+  display: flex;
+  animation: slide-in-right-slider 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
 }
 
 .carousel .carousel__actions {
@@ -113,9 +124,6 @@
   padding: 1rem 1rem;
   text-decoration: none;
   text-shadow: 0px 1px 0px #528ecc;
-  /* position: absolute;
-  bottom: 0;
-  left: 0; */
 }
 .myButton:hover {
   background-color: white;
@@ -124,16 +132,6 @@
 .myButton:active {
   position: relative;
   top: 1px;
-}
-
-@keyframes fadeVisibility {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: opacity linear;
-  }
 }
 
 @media only screen and (max-width: 600px) {
