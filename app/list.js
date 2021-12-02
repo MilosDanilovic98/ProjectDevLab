@@ -188,14 +188,21 @@ fetch(req)
   })
 })
 
+// logic when user search news by category
 categories.addEventListener("click",(e)=>{
+  // disable user to select first option (Categories)
+if(e.target.value == "")
+  return;
+
+  // show loading icon while waiting for server response
+  document.querySelector(".loader").style.display = "block";
 
   // switch background color - known which category is selected
 Array.from(document.querySelectorAll(".sub-dropdown")).forEach((elem)=>{
 elem.style.backgroundColor = "#fff";
 })
 // if user select category, show it
- if(e.target.value.length > 0){
+ if(e.target.value.length > 0 ){
    // get category
     let category = e.target.value;
     // create request
@@ -207,6 +214,8 @@ elem.style.backgroundColor = "#fff";
             return response.json();
         })
         .then((data)=>{
+            // hide loading icon when response status is ready
+             document.querySelector(".loader").style.display = "none";
           // caling functions to display data 
           let news = data.articles;
           message.innerHTML = "";
