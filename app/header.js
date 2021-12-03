@@ -9,7 +9,6 @@ const instance = axios.create({
 });
 
 
-
 instance.get('top-headlines', {
   params: {
     country: 'us',
