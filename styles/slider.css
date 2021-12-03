@@ -59,6 +59,10 @@
   border-top-right-radius: 1rem;
 }
 
+.carousel__element img {
+  max-height: 50%;
+}
+
 .carousel__item_text {
   display: flex;
   flex-direction: column;
