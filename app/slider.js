@@ -114,7 +114,12 @@ function addImages() {
     title.appendChild(readMore);
 
     var image = document.createElement("IMG");
-    image.src = sliderRes.articles[counter].urlToImage;
+    if (sliderRes.articles[counter].urlToImage != null) {
+      image.src = sliderRes.articles[counter].urlToImage;
+    } else {
+      image.src = "images/list/no_img.png";
+    }
+
     title.innerText = sliderRes.articles[counter].title;
     console.log();
     if (title.innerText.length > 80) {

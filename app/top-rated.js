@@ -26,8 +26,11 @@ function addElementsToTopRated() {
     } else {
       topRatedItem.setAttribute("id", "topRatedId" + counter);
     }
-
-    topRatedItem.style.backgroundImage = "url('" + item.urlToImage + "')";
+    if (item.urlToImage != null) {
+      topRatedItem.style.backgroundImage = "url('" + item.urlToImage + "')";
+    } else {
+      topRatedItem.style.backgroundImage = "url('images/list/no_img.png')";
+    }
 
     let topRatedItemTitle = document.createElement("p");
     topRatedItemTitle.innerText = item.title;

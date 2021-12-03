@@ -193,4 +193,16 @@
   .modalTitle {
     font-size: 1rem;
   }
+  .modalArticleDescription {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .modalTitle {
+    font-size: 0.7rem;
+  }
+  .modalArticleDescription {
+    font-size: 0.7rem;
+  }
 }

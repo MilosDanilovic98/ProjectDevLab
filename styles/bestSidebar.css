@@ -92,11 +92,28 @@
   border-radius: 4rem 0 0 2rem;
   text-align: center;
 }
+.fbText {
+  font-size: 2rem;
+  font-weight: 600;
+  width: 100%;
+}
 iframe {
   margin: auto;
   width: 100%;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 450px) {
+  .sidebarBestContainerItem {
+    font-size: 0.7rem;
+    height: auto;
+  }
+  .sidebarBestContainerItem > :first-child {
+    font-size: 0.8rem;
+  }
+  .sidebarBestContainerItemSource {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 451px) and (max-width: 1024px) {
   .sidebarBestContainerItem {
     height: 20rem;
     justify-content: space-between;

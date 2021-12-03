@@ -1,61 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="../styles/about-us.css">
-</head>
 
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../styles/about-us.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../fontawesome/css/all.css" />
+  </head>
 
-    <div class="container">
-        <h1 class="animate__animated animate__heartBeat">About Us</h1>
-        <div class="view-box">
-            <div id="testimonials" class="animate__animated animate__fadeInUp">
-
-                <div class="user">
-                    <img src="/images/img3.jpg" alt="Marko">
-                    <p>Many people feel that before is a limited amound
-                        of abundance, wealth, or chance to succeed in life.
-                        Furthermore, there is a solid beleif that if one
-                        person succeeds, another must fail.</p>
-                    <h3>Marko Raičević</h3>
-                    <h4>Frontend Developer</h4>
-                </div>
-                <div class="user space">
-                    <img src="/images/img1.jpg" alt="Aco">
-                    <p>Many people feel that before is a limited amound
-                        of abundance, wealth, or chance to succeed in life.
-                        Furthermore, there is a solid beleif that if one
-                        person succeeds, another must fail.</p>
-                    <h3>Aleksandar Drašković</h3>
-                    <h4>Full Stack Developer</h4>
-                </div>
-                <div class="user">
-                    <img src="/images/img2.jpg" alt="Milos">
-                    <p>Many people feel that before is a limited amound
-                        of abundance, wealth, or chance to succeed in life.
-                        Furthermore, there is a solid beleif that if one
-                        person succeeds, another must fail.</p>
-                    <h3>Miloš Danilović</h3>
-                    <h4>Backend Developer</h4>
-                </div>
-            </div>
-
-            <div class="controls">
-                <span id="control1"></span>
-                <span id="control2" class="active"></span>
-                <span id="control3"></span>
-            </div>
-
+  <body>
+    <header>
+      <section id="topnavbar">
+        <div class="icons">
+          <span><i class="fa fa-phone"></i> </span>
+          <span><i class="fab fa-facebook-square"></i></span>
+          <span><i class="fab fa-instagram"></i> </span>
+          <span><i class="fab fa-twitter"></i> </span>
         </div>
+      </section>
+      <marquee direction="left" id="scrollingHeaderText"> </marquee>
+    </header>
+
+    <!--NAVIGATION-->
+    <nav>
+      <div class="topnav" id="myTopnav">
+        <a href="#home" id="logo" class="logo-title"
+          ><img
+            src="https://culturenojhome.files.wordpress.com/2019/04/earth-icon.gif?w=372"
+            alt=""
+            style="height: 60px; width: auto"
+          />NEWS</a
+        >
+        <a href="about-us.html" id="active">About-Us</a>
+        <a href="contact-us.html ">Contact</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Categories
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="sub-dropdown">
+              <button id="general" value="general" class="sub-dropbtn">
+                General
+              </button>
+            </div>
+            <div class="sub-dropdown">
+              <button id="business" value="business" class="sub-dropbtn">
+                Business
+              </button>
+            </div>
+            <div class="sub-dropdown">
+              <button id="technology" value="technology" class="sub-dropbtn">
+                Technology
+              </button>
+            </div>
+            <div class="sub-dropdown">
+              <button id="science" value="science" class="sub-dropbtn">
+                Science
+              </button>
+            </div>
+            <div class="sub-dropdown">
+              <button id="health" value="health" class="sub-dropbtn">
+                Health
+              </button>
+            </div>
+            <div class="sub-dropdown">
+              <button id="sports" value="sport" class="sub-dropbtn">
+                Sports
+              </button>
+            </div>
+          </div>
+        </div>
+        <a href="list.html" class="active">List</a>
+        <a href="../index.html">Home</a>
+        <a
+          href="javascript:void(0);"
+          style="font-size: 15px"
+          class="icon"
+          onclick="NavBar()"
+          >&#9776;</a
+        >
+      </div>
+
+      <div id="navbar">
+        <a href="#home" id="logo" class="logo-title" style="float: left"
+          ><img
+            src="https://culturenojhome.files.wordpress.com/2019/04/earth-icon.gif?w=372"
+            alt=""
+            style="height: 60px; width: auto"
+          />NEWS</a
+        >
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Categories
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-content">
+              <div class="sub-dropdown">
+                <button class="sub-dropbtn">Science</button>
+              </div>
+              <div class="sub-dropdown">
+                <button class="sub-dropbtn">Lifestyle</button>
+              </div>
+              <div class="sub-dropdown">
+                <button class="sub-dropbtn">Film</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="">Home</a>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="animate__animated animate__heartBeat">About Us</h1>
+      <div class="view-box">
+        <div id="testimonials" class="animate__animated animate__fadeInUp">
+          <div class="user">
+            <img src="/images/img3.jpg" alt="Marko" />
+            <p>
+              Many people feel that before is a limited amound of abundance,
+              wealth, or chance to succeed in life. Furthermore, there is a
+              solid beleif that if one person succeeds, another must fail.
+            </p>
+            <h3>Marko Raičević</h3>
+            <h4>Frontend Developer</h4>
+          </div>
+          <div class="user space">
+            <img src="/images/img1.jpg" alt="Aco" />
+            <p>
+              Many people feel that before is a limited amound of abundance,
+              wealth, or chance to succeed in life. Furthermore, there is a
+              solid beleif that if one person succeeds, another must fail.
+            </p>
+            <h3>Aleksandar Drašković</h3>
+            <h4>Full Stack Developer</h4>
+          </div>
+          <div class="user">
+            <img src="/images/img2.jpg" alt="Milos" />
+            <p>
+              Many people feel that before is a limited amound of abundance,
+              wealth, or chance to succeed in life. Furthermore, there is a
+              solid beleif that if one person succeeds, another must fail.
+            </p>
+            <h3>Miloš Danilović</h3>
+            <h4>Backend Developer</h4>
+          </div>
+        </div>
+
+        <div class="controls">
+          <span id="control1"></span>
+          <span id="control2" class="active"></span>
+          <span id="control3"></span>
+        </div>
+      </div>
     </div>
+    <footer class="footer">
+      <div class="content">
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">Links</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Get Started</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Services</li>
+            <li><a href="#">App Design</a></li>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Logo Design</a></li>
+            <li><a href="#">Banner Design</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Other services</li>
+            <li><a href="#">SEO</a></li>
+            <li><a href="#">Content Marketing</a></li>
+            <li><a href="#">Prints</a></li>
+            <li><a href="#">Social Media</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Contact</li>
+            <li><a href="#">+382 68 123 456</a></li>
+            <li><a href="#">+382 69 123 456 321</a></li>
+            <li><a href="#">fakenews@gmail.com</a></li>
+          </ul>
+        </div>
+
+        <div class="social">
+          <h6>Follow us</h6>
+          <a href="#"><i class="fab fa-facebook"></i> </a>
+          <a href="#"><i class="fab fa-twitter"></i> </a>
+          <a href="#"><i class="fab fa-instagram"></i> </a>
+          <a href="#"><i class="fab fa-linkedin"></i> </a>
+        </div>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text"
+            >Copyright © 2021
+            <a href="https://developers-lab.me/">Developers Lab Team</a></span
+          >
+        </div>
+      </div>
+    </footer>
     <script src="../app/about-us.js"></script>
-</body>
+    <script src="../app/header.js"></script>
+  </body>
 </html>

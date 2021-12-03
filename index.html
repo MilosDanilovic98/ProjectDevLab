@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap"
       rel="stylesheet"
     />
     <title>NewsToday</title>
   </head>
-
 
   <body>
     <div id="fb-root"></div>
@@ -31,19 +31,18 @@
       src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0"
       nonce="rPqkGoqo"
     ></script>
+
     <header>
       <section id="topnavbar">
         <div class="icons">
           <span><i class="fa fa-phone"></i> </span>
-          <span><i class="fa fa-facebook"></i> </span>
-          <span><i class="fa fa-instagram"></i> </span>
-          <span><i class="fa fa-twitter"></i> </span>
-
+          <span><i class="fab fa-facebook-square"></i></span>
+          <span><i class="fab fa-instagram"></i> </span>
+          <span><i class="fab fa-twitter"></i> </span>
         </div>
       </section>
-      <marquee direction="left" id="topnews"> </marquee>
+      <marquee direction="left" id="scrollingHeaderText"> </marquee>
     </header>
-
 
     <!--NAVIGATION-->
     <nav>
@@ -55,8 +54,8 @@
             style="height: 60px; width: auto"
           />NEWS</a
         >
-        <a href="#about">About-Us</a>
-        <a href="#contact">Contact</a>
+        <a href="pages/about-us.html">About-Us</a>
+        <a href="pages/contact-us.html">Contact</a>
         <div class="dropdown">
           <button class="dropbtn">
             Categories
@@ -192,6 +191,7 @@
 
         <!-- Fb section start -->
         <div class="fbContainer">
+          <p class="fbText">Contact us at Facebook!</p>
           <div
             class="fb-page"
             data-href="https://www.facebook.com/NewsToday-103771608815300/"
@@ -267,9 +267,12 @@
       </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
-    integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+      integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="./script.js"></script>
 
     <script src="app/slider.js"></script>
@@ -278,5 +281,4 @@
     <script src="app/bestSidebar.js"></script>
     <script src="app/header.js"></script>
   </body>
-
 </html>

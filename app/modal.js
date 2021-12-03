@@ -27,7 +27,12 @@ function addModalContent(e) {
   modalContent.innerHTML = "";
   // Modal image
   var image = document.createElement("IMG");
-  image.src = final.articles[articleId].urlToImage;
+  if (final.articles[articleId].urlToImage != null) {
+    image.src = final.articles[articleId].urlToImage;
+  } else {
+    image.src = "images/list/no_img.png";
+  }
+
   // Modal link to website
   var urlToArticle = document.createElement("a");
   urlToArticle.innerText = "Read the Source";

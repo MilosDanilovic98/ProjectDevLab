@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,16 +24,12 @@
       <section id="topnavbar">
         <div class="icons">
           <span><i class="fa fa-phone"></i> </span>
-          <span><i class="fa fa-facebook"></i> </span>
-          <span><i class="fa fa-instagram"></i> </span>
-          <span><i class="fa fa-twitter"></i> </span>
+          <span><i class="fab fa-facebook"></i> </span>
+          <span><i class="fab fa-instagram"></i> </span>
+          <span><i class="fab fa-twitter"></i> </span>
         </div>
       </section>
-      <marquee direction="left">
-        <a href=""
-          >This is a sample scrolling text that has scrolls texts to left.</a
-        >
-      </marquee>
+      <marquee direction="left" id="scrollingHeaderText"> </marquee>
     </header>
 
     <!--NAVIGATION-->
@@ -47,8 +42,8 @@
             style="height: 60px; width: auto"
           />NEWS</a
         >
-        <a href="#about">About-Us</a>
-        <a href="#contact">Contact</a>
+        <a href="about-us.html">About-Us</a>
+        <a href="contact-us.html">Contact</a>
         <div class="dropdown">
           <button class="dropbtn">
             Categories
@@ -87,8 +82,8 @@
             </div>
           </div>
         </div>
-        <a href="./list.html" class="active">List</a>
-        <a href="../index.html" id="active">Home</a>
+        <a href="./list.html" class="active" id="active">List</a>
+        <a href="../index.html">Home</a>
         <a
           href="javascript:void(0);"
           style="font-size: 15px"
@@ -132,6 +127,7 @@
     </nav>
 
     <main>
+      <h2 class="listSearchTxt">Search trough our HeadLines!</h2>
       <div class="search-bar">
         <form class="form-search" method="get" action="#">
           <input
@@ -215,6 +211,6 @@
     </footer>
 
     <script src="../app/list.js"></script>
+    <script src="../app/header.js"></script>
   </body>
 </html>
-
