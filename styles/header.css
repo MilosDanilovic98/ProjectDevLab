@@ -416,9 +416,7 @@ header .btn1 {
   }
 }
 /*CONTAINER*/
-.container {
-  height: 150vh;
-}
+
 #topnavbar {
   display: flex;
   justify-content: space-between;
