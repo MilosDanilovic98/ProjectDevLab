@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 
 * {
   margin: 0;
@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  background-color: #042C31;
+
   color: white;
 }
 
@@ -27,15 +27,14 @@ body {
   padding: 0.3rem 1rem;
   border-radius: 0.5rem;
   overflow-y: hidden;
-
 }
 
 .fas {
   overflow-y: hidden;
 }
 
-.header>p {
-  font-family: 'Quicksand', sans-serif;
+.header > p {
+  font-family: "Quicksand", sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
 }
@@ -44,59 +43,55 @@ body {
   margin: 0.6rem 1.6rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: 'slider''top-rated''best''fb-feed';
+  grid-template-areas: "carousel" "top-rated" "best" "fb-feed";
   gap: 0.6rem;
 }
 
-.main>* {
-  background-color: rgb(18, 53, 89);
+.main > * {
   border-radius: 0.5rem;
   padding: 1rem;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.slider {
-  grid-area: slider;
+.carousel {
+  grid-area: carousel;
+  background-color: #fefdff;
 }
 
 .top-rated {
   grid-area: top-rated;
+  background-color: black;
 }
 
 .best {
   grid-area: best;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* background-color: rgb(20, 66, 158); */
+  /* background-color: black; */
 }
 
-.fb-feed {
-  grid-area: fb-feed;
-}
+
+
 .nav-links {
   display: none;
 }
 
-
+@media only screen and (max-width: 600px) {
+}
 /* Tablet Design */
 @media only screen and (min-width: 768px) {
   .main {
-    height: 80vh;
+    /* height: 80vh;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
-      'slider best'
-      'slider best'
-      'top-rated fb-feed'
-      'top-rated fb-feed';
-   
-      
+      "slider best"
+      "slider best"
+      "top-rated fb-feed"
+      "top-rated fb-feed"; */
   }
 
-  .main>* {
-    height: auto;
-  }
-
-  .header>i {
+  .header > i {
     display: none;
   }
 
@@ -112,7 +107,6 @@ body {
     justify-content: flex-end;
     margin: 0;
     padding: 0;
-
   }
 
   .nav-links li {
@@ -122,17 +116,16 @@ body {
   .nav-links a {
     text-decoration: none;
     color: white;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
-    padding: .5rem;
-    margin: .5rem .5rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0.5rem;
     display: block;
     width: 100%;
-
   }
 
-  .header>p {
+  .header > p {
     width: 100%;
   }
 }
@@ -140,16 +133,16 @@ body {
 /* Laptop Design */
 @media only screen and (min-width: 1024px) {
   .main {
-    height: 80vh;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-auto-rows: min-content;
     grid-template-areas:
-      'slider slider slider best'
-      'slider slider slider best'
-      'top-rated top-rated top-rated fb-feed'
-      'top-rated top-rated top-rated fb-feed';
+      "carousel carousel carousel best"
+      "top-rated top-rated top-rated best"
+      "top-rated top-rated top-rated best"
+      "top-rated top-rated top-rated best"
+      "top-rated top-rated top-rated best";
   }
-  .header>i {
+  .header > i {
     display: none;
   }
 }

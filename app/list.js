@@ -1,3 +1,7 @@
+
+// api key
+const api_key = '&apiKey=9564644c185b40928b511611f6fa100e';
+
 // toggle filters
 const user_input = document.querySelector("#search");
 const filters = document.querySelector(".filters")
@@ -20,6 +24,10 @@ const form = document.querySelector(".form-search");
 const selection = document.querySelector("#options");
 const pagination_element = document.querySelector("#pagination");
 const user_date = document.querySelector("#date");
+
+const categories = document.querySelector(".dropdown");
+const search_bar = document.querySelector(".search-bar");
+
 
 // paggination variables
 let current_page = 1; 
@@ -50,9 +58,12 @@ function displayList(items,wrapepr,rows_per_page, page){
     let result = wrapepr.innerHTML;
     let author,cover_image,description;
     let date = JSON.stringify(news.publishedAt).substring(1,11);
+
+    let title = JSON.stringify(news.title).substring(0,50);
     news.author != null ? author = news.author : author = "Unknown author";
     news.urlToImage ==  null || news.urlToImage  == ""   ? cover_image = "../images/list/no_img.png" : cover_image = news.urlToImage ;
-    news.description != null ? description = news.description : description = " Click on image to read full news ";
+    news.description != null ? description = JSON.stringify(news.description).substring(0,250) + "..." : description = " Click on image to read full news ";
+
 
      // show results
      result += 
@@ -65,9 +76,11 @@ function displayList(items,wrapepr,rows_per_page, page){
            </div>
            <div class="card-body">
              <span class="tag tag-teal">${author}</span>
-             <h4>
-               ${news.title}
-             </h4>
+
+             <a href="${news.url}" target="_blank">
+             <h4> ${title}</h4>
+             </a>
+
              <a href="${news.url}" target="_blank">
              <p>
              ${description}
@@ -83,7 +96,7 @@ function displayList(items,wrapepr,rows_per_page, page){
            </div>
      `
      wrapepr.innerHTML = result;
-   
+
  })
 }
 
@@ -112,6 +125,10 @@ function paginationButton(page,items){
     current_btn.classList.remove("active");
 
     button.classList.add("active");
+
+    window.scrollTo({ top: 10, behavior: 'smooth' });
+
+
   })
 
   return button;
@@ -122,25 +139,40 @@ function paginationButton(page,items){
 // logic on form submit
 form.addEventListener("submit",(e)=>{
   e.preventDefault();
+
+
+  // show loading icon, while waiting for server response
+  document.querySelector(".loader").style.display = "block";
+
+  // first page in pagination
+
   current_page = 1;
 // check user input
 if(user_input.value === ""){
   document.getElementById("search").style.border = "1px solid red";
+
+  document.querySelector(".loader").style.display = "none";
+
+
   return;
 }
 
 // filter filters
 let sortBy = "publishedAt";
 
-// get filter value
+
+// get filter values
+
 if(selection.value == "popularity"){
   sortBy = "popularity";
 }else if(selection.value == "relevancy" )
   sortBy = "relevancy"
 
 
+// get category
+
+
 // api
-    const api_key = '&apiKey=9564644c185b40928b511611f6fa100e';
     let url = "";
 
     if(user_date.value.length < 1) {
@@ -152,9 +184,11 @@ if(selection.value == "popularity"){
    }
 
 // create fetch request
-var req = new Request(url);
+
+let req = new Request(url);
 fetch(req)
-    .then(function(response) {
+    .then((response)=> {
+
     if(response.status == 200)
         return response.json();
     else{
@@ -162,12 +196,63 @@ fetch(req)
     }
     })
 .then((data)=>{
-      console.log(url);
+
+
+       // hide loading icon, when response is ready
+  document.querySelector(".loader").style.display = "none";
      let news = data.articles;
      message.innerHTML = "";
+
+
     // calling function
     displayList(news,results,rows,current_page);
     SetupPagination(news,pagination_element,rows);
    
   })
+
 })
+
+// logic when user search news by category
+categories.addEventListener("click",(e)=>{
+  // disable user to select first option (Categories)
+if(e.target.value == "")
+  return;
+
+  // show loading icon while waiting for server response
+  document.querySelector(".loader").style.display = "block";
+
+  // switch background color - known which category is selected
+Array.from(document.querySelectorAll(".sub-dropdown")).forEach((elem)=>{
+elem.style.backgroundColor = "#fff";
+})
+// if user select category, show it
+ if(e.target.value.length > 0 ){
+   // get category
+    let category = e.target.value;
+    // create request
+    let url = `https://newsapi.org/v2/top-headlines?category=${category}${api_key}`;
+    let req = new Request(url);
+      // create request
+      fetch(req)
+        .then(function(response){
+            return response.json();
+        })
+        .then((data)=>{
+            // hide loading icon when response status is ready
+             document.querySelector(".loader").style.display = "none";
+          // caling functions to display data 
+          let news = data.articles;
+          message.innerHTML = "";
+        displayList(news,results,rows,current_page);
+        SetupPagination(news,pagination_element,rows);
+        })
+  search_bar.classList.add("hide");
+  document.querySelector(`#${e.target.value}`).parentElement.style.backgroundColor = "#44FFEE";
+
+}
+
+
+})
+
+
+

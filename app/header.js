@@ -8,6 +8,7 @@ const instance = axios.create({
     'access-control-allow-origin': '*'}
 });
 
+
 instance.get('top-headlines', {
   params: {
     country: 'us',
