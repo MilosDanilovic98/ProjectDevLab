@@ -191,6 +191,7 @@ header .btn1 {
 .sub-dropdown {
   float: right;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .dropdown .dropbtn,
@@ -205,6 +206,7 @@ header .btn1 {
   margin: 0;
   text-transform: uppercase !important;
   font-weight: 600;
+  cursor: pointer;
 }
 .sub-dropdown button {
   color: black !important;

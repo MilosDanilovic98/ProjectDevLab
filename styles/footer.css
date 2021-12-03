@@ -20,6 +20,7 @@ footer {
   left: 0;
   width: 100%;
   overflow-y: hidden;
+  color: black;
 }
 .link-boxes {
   display: flex;
@@ -44,7 +45,7 @@ footer {
   display: inline-block;
   font-size: 0.8rem;
   text-decoration: none;
-  color: rgb(18, 53, 89);
+  /* color: rgb(18, 53, 89); */
 }
 .box li {
   overflow-y: hidden;
