@@ -34,7 +34,7 @@
 //TOP NAVIGATION
 var headerScroll;
 var url =
-  "https://newsapi.org/v2/top-headlines?country=us&apiKey=9564644c185b40928b511611f6fa100e";
+  "https://newsapi.org/v2/top-headlines?country=us&apiKey=e3fb4f5299d44066b025296877ccc8e4";
 var topRatedRes;
 var req = new Request(url);
 fetch(url)
@@ -60,9 +60,9 @@ function addTextToHeaderScroll() {
   for (let item of headerScroll.articles) {
     if (item.title.length > 80) {
       scrollingHeaderTxt.innerText +=
-        "'" + item.title.slice(0, 80) + `'.....       '`;
+        "'" + item.title.slice(0, 80) + `..... ****       `;
     } else {
-      scrollingHeaderTxt.innerText += item.title + "     ";
+      scrollingHeaderTxt.innerText += item.title + " ..... ****   ";
     }
   }
 }
